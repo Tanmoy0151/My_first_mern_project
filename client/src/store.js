@@ -14,6 +14,9 @@ import {
     orderDeliverReducer,
 } from './reducers/orderReducers';
 
+// Import dashboard reducer
+import { dashboardSummaryReducer } from './reducers/dashboardReducers';
+
 // Add orderDetailsReducer, orderPayReducer, and orderDeliverReducer to combineReducers
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -23,6 +26,7 @@ const reducer = combineReducers({
     orderDetails: orderDetailsReducer,
     orderPay: orderPayReducer,
     orderDeliver: orderDeliverReducer,
+    dashboardSummary: dashboardSummaryReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
