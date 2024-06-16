@@ -2,10 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const http = require('http');
+const socketIo = require('socket.io');
+
+// Update server.js to include Socket.IO
 
 dotenv.config();
 
 const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
